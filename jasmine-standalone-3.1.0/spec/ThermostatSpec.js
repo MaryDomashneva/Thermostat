@@ -18,12 +18,18 @@ describe('Thermostat', function() {
   it('sets a new temperature', function() {
     thermostat.temperatureSet(18);
     expect(thermostat.currentTemperature()).toEqual(18);
-  })
+  });
+
+  it('throws an error if user attempt to set temperature below 10', function() {
+    expect(function()  {
+      thermostat.temperatureSet(9);
+    }).toThrowError('Temperature is too low. Set temperature > 10 points');
+  });
 
   it('resets temperature back to default 20 points', function() {
     thermostat.temperatureReSet();
     expect(thermostat.currentTemperature()).toEqual(20);
-  })
+  });
 
   it('increases temperature by 1 point', function() {
     expect(thermostat.temperatureUp()).toEqual(21);
