@@ -5,26 +5,26 @@ $(document).ready(function() {
 
   $('#increase').on('click', function() {
     thermostat.temperatureUp();
-    $('#currentTemperature').text(`Temperature: ${thermostat.temperature}`);
+    $('#currentTemperature').html(`<p> <span style = "color: black;">Temperature: </span> ${thermostat.temperature} </p>`);
     thermostat.powerSave()
-    $('#safeModeStatus').text(`Power save mode: ${thermostat.saveMode}`);
+    $('#safeModeStatus').html(`<p> <span style = "color: black;">Power save mode: </span> ${thermostat.saveMode} </p>`);
     thermostat.Usage()
-    $('#powerUsageStatus').text(`Power Usage: ${thermostat.powerUsage}`);
+    $('#powerUsageStatus').html(`<p> <span style = "color: black;">Power Usage: </span> ${thermostat.powerUsage} </p>`);
   });
 
   $('#decrease').on('click', function() {
     thermostat.temperatureDown();
-    $('#currentTemperature').text(`Temperature: ${thermostat.temperature}`);
+    $('#currentTemperature').html(`<p> <span style = "color: black;">Temperature: </span> ${thermostat.temperature} </p>`);
     thermostat.powerSave()
-    $('#safeModeStatus').text(`Power save Mode: ${thermostat.saveMode}`);
+    $('#safeModeStatus').html(`<p> <span style = "color: black;">Power save mode: </span> ${thermostat.saveMode} </p>`);
     thermostat.Usage()
-    $('#powerUsageStatus').text(`Power Usage: ${thermostat.powerUsage}`);
+    $('#powerUsageStatus').html(`<p> <span style = "color: black;">Power Usage: </span> ${thermostat.powerUsage} </p>`);
   });
 
   $('#reset').on('click', function() {
     thermostat.temperatureReSet();
-    $('#currentTemperature').text(`Temperature: ${thermostat.temperature}`);
-    $('#safeModeStatus').text(`Power save Mode: ${thermostat.saveMode}`);
-    $('#powerUsageStatus').text(`Power Usage: ${thermostat.powerUsage}`);
+    $('#currentTemperature').html(`<p> <span style = "color: black;">Temperature: </span> ${thermostat.temperature} </p>`);
+    $('#safeModeStatus').html(`<p> <span style = "color: black;">Power save mode: </span> ${thermostat.saveMode} </p>`);
+    $('#powerUsageStatus').html(`<p> <span style = "color: black;">Power Usage: </span> ${thermostat.powerUsage} </p>`);
   });
 });
