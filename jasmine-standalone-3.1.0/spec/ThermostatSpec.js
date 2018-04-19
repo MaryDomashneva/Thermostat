@@ -39,13 +39,20 @@ describe('Thermostat', function() {
     expect(thermostat.temperatureDown()).toEqual(19);
   });
 
+  it('throws an error if user attempt to set temperature below 10', function() {
+    thermostat.temperatureSet(11);
+    expect(function()  {
+      thermostat.temperatureDown();
+    }).toThrowError('Temperature is too low. Set temperature > 10 points');
+  });
+
   it('returns true when power save is on', function() {
-    expect(thermostat.powerSave()).toEqual(true);
+    expect(thermostat.powerSave()).toEqual('On');
   });
 
   it('returns false when power save is off', function() {
     thermostat.temperatureSet(26);
-    expect(thermostat.powerSave()).toEqual(false);
+    expect(thermostat.powerSave()).toEqual('Off');
   });
 
   it('returns low-usage if current temperature < 18 points', function() {

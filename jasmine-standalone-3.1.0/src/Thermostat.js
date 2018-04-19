@@ -2,7 +2,7 @@
 
 function Thermostat() {
   this.temperature = 20;
-  this.saveMode = true;
+  this.saveMode = 'On';
   this.powerUsage = 'medium-usage';
 };
 
@@ -12,7 +12,7 @@ Thermostat.prototype.temperatureSet = function(temperature) {
   } else {
     this.temperature = temperature;
     return this.temperature
-  }
+  };
 };
 
 Thermostat.prototype.temperatureReSet = function() {
@@ -26,26 +26,32 @@ Thermostat.prototype.temperatureUp = function() {
 };
 
 Thermostat.prototype.temperatureDown = function() {
-  this.temperature -= 1;
-  return this.temperature
+  if(this.temperature == 11) {
+    throw new Error ('Temperature is too low. Set temperature > 10 points');
+  } else {
+    this.temperature -= 1;
+    return this.temperature
+  };
 };
 
 Thermostat.prototype.powerSave = (function() {
   if(this.temperature <= 25) {
-    return this.saveMode = true;
+    this.saveMode = 'On';
   } else {
-    return this.saveMode = false;
-  }
+    this.saveMode = 'Off';
+  };
+  return this.saveMode
 });
 
 Thermostat.prototype.Usage = (function() {
   if(this.temperature < 18) {
-    return this.powerUsage = 'low-usage';
+    this.powerUsage = 'low-usage';
   } else if(this.temperature <= 25 && this.temperature >= 18) {
-    return this.powerUsage = 'medium-usage';
+    this.powerUsage = 'medium-usage';
   } else {
-    return this.powerUsage = 'high-usage';
+    this.powerUsage = 'high-usage';
   };
+  return this.powerUsage
 });
 
 Thermostat.prototype.currentTemperature = function() {

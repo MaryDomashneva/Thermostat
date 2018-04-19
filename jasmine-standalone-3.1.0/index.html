@@ -1,39 +1,48 @@
 <DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
 <head>
-<body class = 'Termostate' >
-  <div class = 'temperature'>
-    <h2 class = 'current_temperature'>
-      Current temperature
-    </h2>
-  </div>
+<body id = 'Termostate' class = 'colored_body'>
+  <div class = 'centered'>
+    <div id = 'temperature'>
+      <h2 id = 'currentTemperature'>
+        Current temperature
+      </h2>
+    </div>
 
-  <div class = 'safeMode' >
-    <h2 class = 'safeModeStatus'>
-      On
-    </h2>
-  </div>
+    <div id = 'safeMode' >
+      <h2 id = 'safeModeStatus'>
+        On
+      </h2>
+    </div>
 
-  <div class = 'powerUsage' >
-    <h2 class = 'powerUsageStatus'>
-      Low-usage/Medium-usage/High-usage
-    </h2>
-  </div>
+    <div id = 'powerUsage' >
+      <h2 id = 'powerUsageStatus'>
+        Low-usage/Medium-usage/High-usage
+      </h2>
+    </div>
 
-  <div class = 'setTemperature'>
-    <button class = 'increase'>
-      Temperature Up
-    </bitton>
-    <button class = 'decrease'>
-      Temperature Down
-    </bitton>
-    <button class = 'reset'>
-      Temperature Reset
-    </bitton>
+    <div id = 'setTemperature'>
+      <button id = 'increase' class = 'ui green button'>
+        Temperature Up
+      </bitton>
+      <button id = 'decrease' class = 'ui green button'>
+        Temperature Down
+      </bitton>
+      <button id = 'reset' class = 'ui green button'>
+        Temperature Reset
+      </bitton>
+    </div>
+    <script src="src/thermostat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/interface.js"></script>
   </div>
-  <script src="src/thermostat.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="src/interface.js"></script>
 </body>
 </html>
 </DOCTYPE>
