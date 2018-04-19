@@ -1,0 +1,23 @@
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.colored_body {
+  background-color:  #c5e1a5;
+}
+
+.colored_status {
+  color: #9e9e9e;
+}
+
+.weather-flex-container {
+  display: flex;
+}
+
+.weather-flex-container > div {
+  margin: 10px;
+  padding: 20px;
+}

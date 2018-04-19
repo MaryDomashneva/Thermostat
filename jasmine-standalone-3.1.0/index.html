@@ -10,25 +10,33 @@
 <head>
 <body id = 'Termostate' class = 'colored_body'>
   <div class = 'centered'>
-    <div id = 'weather'>
-      <h2 id = 'currentWeather' class = 'colored_status'>
-        Current weather
-      </h2>
+    <div class = 'weather_flex_container'>
+      <div id = 'weather' class = 'weather_flex_item'>
+        <h2 id = 'currentWeather' class = 'colored_status'>
+          Current weather
+        </h2>
+      </div>
+
+      <div id = 'temperature' class = 'weather_flex_item'>
+        <select id = 'currentCity'>
+          <option value="524901">Moskow</option>
+          <option value="1496747">Novosibirsk</option>
+          <option value="2643741">London</option>
+          <option value="5128581">New York</option>
+          <option value="2988507">Paris</option>
+          <option value="520555">Nizhniy Novgorod</option>
+          <option value="535121">Lipetsk</option>
+        </select>
+      </div>
+
+      <div id = 'temperatureIconContainer' class = 'weather_flex_item'>
+        <img src='' id = 'temperatureIcon' alt='weather_icon'>
+      </div>
     </div>
 
-    <div id = 'temperature'>
-      <select id = 'currentCity'>
-        <option value="524901">London</option>
-        <option value="1496747">Novosibirsk</option>
-        <!-- <option value="newyork">New York</option>
-        <option value="paris">Paris</option>
-        <option value="tokyo">Moskow</option>
-        <option value="tokyo">Nizhniy Novgorod</option>
-        <option value="tokyo">Lipetzk</option> -->
-      </select> <h2 id = 'currentTemperature' class = 'colored_status'>
-        Current temperature
-      </h2>
-    </div>
+    <h2 id = 'currentTemperature' class = 'colored_status'>
+      Current temperature
+    </h2>
 
     <div id = 'safeMode'>
       <h2 id = 'safeModeStatus' class = 'colored_status'>
