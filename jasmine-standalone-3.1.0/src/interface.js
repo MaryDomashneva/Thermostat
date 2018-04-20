@@ -43,20 +43,19 @@ $(document).ready(function() {
 
   // &mode=html
   // .html(data)
-
-  // displayWeather('London');
-  // $('#currentCity').change(function() {
-  //   var city = $('#currentCity').val();
-  //   displayWeather(city);
-  // });
-
+  displayWeather('London');
   $('#currentCity').change(function() {
     var city = $('#currentCity').val();
-    $.get('http://api.openweathermap.org/data/2.5/weather?id=' + city +
-    '&APPID=c8df41c4038bdc5922376af535474baf&units=metric', function(data) {
-      $('#currentWeather').text(data.main.temp);
-      $('#temperatureIcon').attr('src',
-      `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
-    });
+    displayWeather(city);
   });
+
+  // $('#currentCity').change(function() {
+  //   var city = $('#currentCity').val();
+  //   $.get('http://api.openweathermap.org/data/2.5/weather?id=' + city +
+  //   '&APPID=c8df41c4038bdc5922376af535474baf&units=metric', function(data) {
+  //     $('#currentWeather').text(data.main.temp);
+  //     $('#temperatureIcon').attr('src',
+  //     `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+  //   });
+  // });
 });
