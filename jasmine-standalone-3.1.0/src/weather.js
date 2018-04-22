@@ -1,7 +1,7 @@
 'use strict';
 
 function displayWeather(city) {
-  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+  var url = 'http://api.openweathermap.org/data/2.5/weather?id=' + city;
   var token = '&APPID=c8df41c4038bdc5922376af535474baf';
   var units = '&units=metric';
 
